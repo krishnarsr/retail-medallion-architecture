@@ -1,0 +1,12 @@
+.git
+.github
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+.env
+data/landing/*
+data/lakehouse/*
+data/quality/*
+Retail-Medallion-Lakehouse-Portfolio.zip

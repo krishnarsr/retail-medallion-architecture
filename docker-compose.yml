@@ -1,0 +1,14 @@
+services:
+  pipeline:
+    build: .
+    image: retail-medallion-lakehouse:local
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATA_ROOT: /app/data
+      SPARK_MASTER: local[*]
+    volumes:
+      - ./data:/app/data
+      - ./config:/app/config:ro
+    command: ["run-all"]

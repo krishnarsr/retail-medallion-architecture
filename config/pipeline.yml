@@ -1,0 +1,29 @@
+project:
+  name: retail-medallion-lakehouse
+  timezone: UTC
+paths:
+  landing: data/landing
+  lakehouse: data/lakehouse
+  quality: data/quality
+tables:
+  bronze:
+    customers: bronze/customers
+    products: bronze/products
+    orders: bronze/orders
+  silver:
+    customers: silver/customers_scd2
+    products: silver/products
+    sales: silver/sales
+    quarantine: silver/quarantine
+  gold:
+    dim_customer: gold/dim_customer
+    dim_product: gold/dim_product
+    fact_sales: gold/fact_sales
+    daily_sales: gold/daily_sales
+    customer_360: gold/customer_360
+    product_performance: gold/product_performance
+quality:
+  max_order_quarantine_rate: 0.05
+  require_unique_order_id: true
+  require_positive_quantity: true
+  require_non_negative_price: true

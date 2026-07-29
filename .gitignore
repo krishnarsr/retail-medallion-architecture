@@ -1,0 +1,20 @@
+# Environment configuration
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+.idea/
+.vscode/
+data/landing/*
+data/lakehouse/*
+data/quality/*
+!data/landing/.gitkeep
+!data/lakehouse/.gitkeep
+!data/quality/.gitkeep
+spark-warehouse/
+metastore_db/
+derby.log
